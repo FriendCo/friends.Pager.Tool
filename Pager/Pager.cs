@@ -29,19 +29,19 @@ namespace Pager
             int end = 10;
             int start = 0;
 
-            var pagecount = value.Count / count;
-            var remaning = value.Count % count;
-            var strPageCount = pagecount.ToString() + "." + remaning.ToString();
+            int pagecount = value.Count / count;
+            int remaning = value.Count % count;
+            string strPageCount = pagecount.ToString() + "." + remaning.ToString();
 
             //Return Count 
-            var pageCount = Convert.ToDouble(strPageCount);
+            double pageCount = Convert.ToDouble(strPageCount);
             //===================================================================
             
             //===================================================================
             if (index != 0)
             {
-                var st = index * count;
-                var en = st + count;
+                int st = index * count;
+                int en = st + count;
                 if (st == en)
                 {
                     st = st - en;
